@@ -1,0 +1,7 @@
+-- Przedstawienie za pomocą podzapytania produktów, które są większe od średniej wszystkich produktów.
+
+select description as nazwa_produktu, price as cena
+ from product
+ where price > (select avg(price) from product)
+ order by price desc;
+ 
