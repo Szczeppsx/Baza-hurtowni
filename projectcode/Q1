@@ -1,0 +1,11 @@
+--Zestawienie przedstawia sumę zamówień dla poszczególnych firm.
+
+select CUSTOMER.NAME, sum(order_qty) as suma_zamowien, description as produkt
+from customer
+inner join
+customer_order
+on customer.CUSTOMER_ID = customer_order.CUSTOMER_ID
+inner join
+product
+on customer_order.PRODUCT_ID = product.PRODUCT_ID
+group by 1,3;
