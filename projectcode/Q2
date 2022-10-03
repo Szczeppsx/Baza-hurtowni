@@ -1,0 +1,10 @@
+-- Zestawienie jakiego rodzaju produkt zakupila poszczegolna firma, wraz z uwzglednieniem firm, które nie dokonały żadnego zakupu.
+
+select CUSTOMER.NAME, description as produkt
+from customer
+left join
+customer_order
+on customer.CUSTOMER_ID = customer_order.CUSTOMER_ID
+left join
+product
+on customer_order.PRODUCT_ID = product.PRODUCT_ID
