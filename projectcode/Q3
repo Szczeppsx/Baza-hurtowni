@@ -1,4 +1,4 @@
--- Przedstawienie za pomocą podzapytania produktów, które są większe od średniej wszystkich produktów.
+-- Przedstawienie za pomocą podzapytania produktów, których cena  jest większa od ceny średniej wszystkich produktów.
 
 select description as nazwa_produktu, price as cena
  from product
